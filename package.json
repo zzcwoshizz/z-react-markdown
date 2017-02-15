@@ -1,0 +1,24 @@
+{
+  "name": "z-react-markdown",
+  "version": "0.0.0",
+  "description": "自用react MarkDown编辑器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzcwoshizz/z-react-markdown.git"
+  },
+  "author": "zhangzhichao <zzcwoshizz1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzcwoshizz/z-react-markdown/issues"
+  },
+  "homepage": "https://github.com/zzcwoshizz/z-react-markdown#readme",
+  "dependencies": {
+    "markdown": "^0.5.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
