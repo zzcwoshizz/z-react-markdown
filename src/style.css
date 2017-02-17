@@ -1,0 +1,36 @@
+.editorContainer {
+    background: #f6f7f8;
+    -webkit-box-shadow: 0 0 4px #999;
+    box-shadow: 0 0 4px #999;
+}
+
+.toolbar {
+    height: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid lightgray;
+}
+
+.toolbar > span {
+    display: inline-block;
+    height: 34px;
+    width: 1px;
+    background: lightgray;
+}
+
+.toolbar > li {
+    transition: background 0.27s;
+    list-style-type: none;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar > li:hover {
+    transition: background 0.27s;
+    background: #ddd;
+}
