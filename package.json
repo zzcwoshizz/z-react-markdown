@@ -2,9 +2,10 @@
   "name": "z-react-markdown",
   "version": "0.0.0",
   "description": "自用react MarkDown编辑器",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --inline --colors --progress",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,26 @@
     "markdown": "^0.5.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.3",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "html-webpack-plugin": "^2.28.0",
+    "postcss": "^5.2.13",
+    "postcss-loader": "^1.3.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }
