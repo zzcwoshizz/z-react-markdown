@@ -1,7 +1,10 @@
-.editorContainer {
+.editor-container {
+    font-size: 14px;
     background: #f6f7f8;
     -webkit-box-shadow: 0 0 4px #999;
     box-shadow: 0 0 4px #999;
+    display: flex;
+    flex-direction: column;
 }
 
 .toolbar {
@@ -33,4 +36,29 @@
 .toolbar > li:hover {
     transition: background 0.27s;
     background: #ddd;
+}
+
+.editor-content {
+    flex-basis: 100%;
+}
+
+.editor-content > div,textarea {
+    background: none;
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.editor-content > .editor-edite {
+    font-size: 14px;
+    outline: none;
+    border: none;
+    resize:none;
+    padding: 6px 12px;
+}
+
+.editor-content > .editor-preview {
+    border-left: 1px solid lightgray;
+    padding: 6px 12px;
 }

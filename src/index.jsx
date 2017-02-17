@@ -1,4 +1,6 @@
 import React from 'react';
+const markdown = require('markdown').markdown;
+
 import H1 from './icons/H1';
 import H2 from './icons/H2';
 import H3 from './icons/H3';
@@ -20,6 +22,20 @@ import A1 from './icons/A1';
 import A from './icons/A';
 
 export default class Editor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            text: ''
+        };
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange(e) {
+        this.setState({
+            text: e.target.value
+        });
+    }
+
     render() {
         const {
             width,
@@ -27,7 +43,7 @@ export default class Editor extends React.Component {
         } = this.props;
         return <div
             style={{ width, height }}
-            className='editorContainer'
+            className='editor-container'
         >
             <div className='toolbar'>
                 <li><B></B></li>
@@ -53,6 +69,32 @@ export default class Editor extends React.Component {
                 <li><Img></Img></li>
                 <span></span>
                 <li title='清空'><Empty></Empty></li>
+            </div>
+            <div className='editor-content'>
+                <textarea
+                    className='editor-edite'
+                    onKeyDown={e => {
+                        const self = e.target;
+                        if (e.keyCode == 9) {
+                            e.preventDefault();
+                            if (!e.shiftKey) {
+                                let indent = '    ';
+                                let start = self.selectionStart;
+                                let end = self.selectionEnd;
+                                let selected = window.getSelection().toString();
+                                selected = indent + selected.replace(/\n/g, '\n' + indent);
+                                self.value = self.value.substring(0, start) + selected + self.value.substring(end);
+                                self.setSelectionRange(start + indent.length, start + selected.length);
+                            }
+                        }
+                    }}
+                    value={this.props.value || this.state.text}
+                    onChange={this.props.onChange || this.onChange}
+                ></textarea>
+                <div
+                    className='editor-preview'
+                    dangerouslySetInnerHTML={{ __html: markdown.toHTML(this.state.text) }}
+                ></div>
             </div>
         </div>;
     }
