@@ -66,6 +66,7 @@
 .editor-content > .editor-preview {
     border-left: 1px solid lightgray;
     padding: 6px 12px;
+    word-wrap: break-word;
 }
 
 .CodeMirror-activeline > .CodeMirror-activeline-background {
@@ -74,4 +75,91 @@
 
 .CodeMirror-selected {
     background: rgb(249, 204, 226) !important;
+}
+
+.dialog-title {
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 40px;
+    box-shadow: 0 1px 1px lightgray;
+    text-indent: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.dialog-content {
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.dialog-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+}
+
+.dialog-field > span {
+    flex-shrink: 0;
+    color: #666;
+}
+
+.dialog-field > input {
+    height: 36px;
+    outline: none;
+    margin-left: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    flex-basis: 100%;
+    border: 1px solid #ddd;
+    color: #999;
+    font-weight: 300;
+}
+
+.dialog-field > div > input {
+    height: 30px;
+    outline: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    color: #777;
+    font-weight: 300;
+}
+
+.dialog-operation {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dialog-operation > button {
+    transition: background 0.27s;
+    background: none;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    border-radius: 4px;
+    outline: none;
+    padding: 7px 21px;
+}
+.dialog-operation > button:hover {
+    transition: background 0.27s;
+    background: #ddd;
+}
+
+.dialog {
+    position: fixed;
+    width: 400px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0 0 8px lightgray;
+    box-sizing: border-box;
+    z-index: 100;
 }

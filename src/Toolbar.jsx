@@ -23,29 +23,29 @@ import A from './icons/A';
 export default class Toolbar extends React.Component {
     render() {
         return <div className='toolbar'>
-            <li><B></B></li>
-            <li><Delete></Delete></li>
-            <li><Incline></Incline></li>
-            <li><Block></Block></li>
-            <li><A></A></li>
-            <li><A1></A1></li>
+            <li title='粗体' onClick={this.props.exeCommand('b')}><B></B></li>
+            <li title='删除线' onClick={this.props.exeCommand('delete')}><Delete></Delete></li>
+            <li title='斜体' onClick={this.props.exeCommand('incline')}><Incline></Incline></li>
+            <li title='引用' onClick={this.props.exeCommand('block')}><Block></Block></li>
+            <li title='选中部分大写' onClick={this.props.exeCommand('A')}><A></A></li>
+            <li title='选中部分小写' onClick={this.props.exeCommand('A1')}><A1></A1></li>
             <span></span>
-            <li><H1></H1></li>
-            <li><H2></H2></li>
-            <li><H3></H3></li>
-            <li><H4></H4></li>
-            <li><H5></H5></li>
-            <li><H6></H6></li>
+            <li title='标题1' onClick={this.props.exeCommand('H1')}><H1></H1></li>
+            <li title='标题2' onClick={this.props.exeCommand('H2')}><H2></H2></li>
+            <li title='标题3' onClick={this.props.exeCommand('H3')}><H3></H3></li>
+            <li title='标题4' onClick={this.props.exeCommand('H4')}><H4></H4></li>
+            <li title='标题5' onClick={this.props.exeCommand('H5')}><H5></H5></li>
+            <li title='标题6' onClick={this.props.exeCommand('H6')}><H6></H6></li>
             <span></span>
-            <li><Wlist></Wlist></li>
-            <li><Ylist></Ylist></li>
+            <li title='无序列表' onClick={this.props.exeCommand('w-list')}><Wlist></Wlist></li>
+            <li title='有序列表' onClick={this.props.exeCommand('y-list')}><Ylist></Ylist></li>
             <span></span>
-            <li><Link></Link></li>
-            <li><Table></Table></li>
-            <li><Code></Code></li>
-            <li><Img></Img></li>
+            <li title='链接' onClick={this.props.exeCommand('link')}><Link></Link></li>
+            <li title='表格' onClick={this.props.exeCommand('table')}><Table></Table></li>
+            <li title='代码块' onClick={this.props.exeCommand('code')}><Code></Code></li>
+            <li title='图片' onClick={this.props.exeCommand('img')}><Img></Img></li>
             <span></span>
-            <li title='清空'><Empty></Empty></li>
+            <li title='清空' onClick={this.props.exeCommand('empty')}><Empty></Empty></li>
         </div>;
     }
 }
