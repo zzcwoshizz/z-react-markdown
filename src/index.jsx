@@ -13,10 +13,8 @@ export default class Editor extends React.Component {
         this.onChange = this.onChange.bind(this);
     }
 
-    onChange(e) {
-        this.setState({
-            text: e.target.value
-        });
+    onChange(text) {
+        this.setState({ text });
     }
 
     render() {
@@ -27,18 +25,21 @@ export default class Editor extends React.Component {
         return <div
             className='editor-container'
         >
-            <Toolbar/>
+            <Toolbar />
             <div className='editor-content'
                 style={{ width, height }}
             >
                 <Edite
-                    value={this.props.value || this.state.text}
-                    onChange={this.props.onChange || this.onChange}
+                    lines={this.state.lines}
+                    onChange={this.onChange}
+                    addNewLine={this.addNewLine}
                 />
                 <div
                     ref='aaa'
                     className='editor-preview'
-                    dangerouslySetInnerHTML={{ __html: marked(this.state.text) }}
+                    dangerouslySetInnerHTML={{
+                        __html: marked(this.state.text.replace(/&nbsp;/g, ' '))
+                    }}
                 ></div>
             </div>
         </div>;

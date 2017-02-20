@@ -42,13 +42,13 @@
     flex-basis: 100%;
 }
 
-.editor-content > div,textarea {
+.editor-content > div {
     background: none;
     width: 50%;
     height: 100%;
     float: left;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .editor-content > .editor-edite {
@@ -56,10 +56,22 @@
     outline: none;
     border: none;
     resize:none;
+}
+
+.editor-content > .editor-edite > div {
     padding: 6px 12px;
+    min-height: 32px;
 }
 
 .editor-content > .editor-preview {
     border-left: 1px solid lightgray;
     padding: 6px 12px;
+}
+
+.CodeMirror-activeline > .CodeMirror-activeline-background {
+    background: rgba(249, 204, 226, 0.3);
+}
+
+.CodeMirror-selected {
+    background: rgb(249, 204, 226) !important;
 }

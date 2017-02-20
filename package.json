@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zzcwoshizz/z-react-markdown#readme",
   "dependencies": {
+    "codemirror": "^5.23.0",
     "marked": "^0.3.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
