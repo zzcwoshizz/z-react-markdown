@@ -25,7 +25,7 @@ es6
 
 
 | Property | Type | Description |
-| :- | :- | :- |
+| :------------- | :------------- | :------------- |
 | onChange | `{mdStr: '', html: ''}` | editor content |
 | width | String or Integer |  |
 | height | String or Integer |  |
