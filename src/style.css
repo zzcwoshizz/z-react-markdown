@@ -3,12 +3,9 @@
     background: #f6f7f8;
     -webkit-box-shadow: 0 0 4px #999;
     box-shadow: 0 0 4px #999;
-    display: flex;
-    flex-direction: column;
 }
 
 .toolbar {
-    height: 34px;
     display: flex;
     flex-wrap: wrap;
     border-bottom: 1px solid lightgray;
@@ -36,10 +33,6 @@
 .toolbar > li:hover {
     transition: background 0.27s;
     background: #ddd;
-}
-
-.editor-content {
-    flex-basis: 100%;
 }
 
 .editor-content > div {

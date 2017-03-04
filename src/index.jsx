@@ -44,6 +44,7 @@ export default class Editor extends React.Component {
         } = this.props;
         return <div
             className='editor-container'
+            style={{ width }}
         >
             {this.state.showLinkDialog ? <LinkDialog
                 submit={({text, link}) => {
@@ -118,9 +119,7 @@ export default class Editor extends React.Component {
                 }}
             /> : null}
             <Toolbar exeCommand={this.exeCommand}/>
-            <div className='editor-content'
-                style={{ width, height }}
-            >
+            <div className='editor-content' style={{ height }}>
                 <Edite
                     onChange={this.onChange}
                     buildEditor={this.buildEditor}
