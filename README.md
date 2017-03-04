@@ -29,4 +29,3 @@ es6
 | onChange       | `{mdStr: '', html: ''}` | editor content |
 | width          | String or Integer       |  |
 | height         | String or Integer       |  |
-
