@@ -82,29 +82,29 @@ export default class Editor extends React.Component {
                     let str2 = '';
                     for (let i = 0; i < row; i++) {
                         for (let j = 0; j <= col; j++) {
-                            str1 += '| ';
+                            str1 += '|             ';
                         }
                         str.push(str1.slice(0, -1));
                         str1 = '';
                     }
                     if (alignType == 0) {
                         for (let j = 0; j < col; j++) {
-                            str2 += '|-';
+                            str2 += '|-------------';
                         }
                         str2 += '|';
                     } else if (alignType == 1) {
                         for (let j = 0; j < col; j++) {
-                            str2 += '|:-';
+                            str2 += '|:-------------';
                         }
                         str2 += '|';
                     } else if (alignType == 2) {
                         for (let j = 0; j < col; j++) {
-                            str2 += '|:-:';
+                            str2 += '|:-------------:';
                         }
                         str2 += '|';
                     } else {
                         for (let j = 0; j < col; j++) {
-                            str2 += '|-:';
+                            str2 += '|-------------:';
                         }
                         str2 += '|';
                     }
