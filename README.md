@@ -22,8 +22,8 @@ es6
 `<Editor onChange={} width={} height={}/>`
 
 #### Apis
-|Property|Type|Description|
-|:-|:-|:-|
-|onChange|`{mdStr: '', html: ''}`|editor content|
-|width|String or Integer| |
-|height|String or Integer| |
+| Property | Type | Description |
+| :- | :- | :- |
+| onChange | `{mdStr: '', html: ''}` | editor content |
+| width | String or Integer |  |
+| height | String or Integer |  |
