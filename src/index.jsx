@@ -29,6 +29,12 @@ export default class Editor extends React.Component {
 
     onChange(text) {
         this.setState({ text });
+        if (this.props.onChange) {
+            this.props.onChange({
+                mdStr: text,
+                html: marked(text.replace(/&nbsp;/g, ' '))
+            });
+        }
     }
 
     render() {
